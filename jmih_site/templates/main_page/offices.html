@@ -1,0 +1,69 @@
+{% extends "base.html" %}
+{% block title %}
+    Филлиалы
+{% endblock %}
+{% block content %}
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Карусельный слайдер</title>
+        <style>
+            .carousel-container {
+                width: 80%;
+                margin: 40px auto;
+                overflow: hidden;
+            }
+            .carousel {
+                display: flex;
+                transition: transform 0.5s ease-in-out;
+            }
+            .carousel-item {
+                flex: 0 0 300px;
+                height: 300px;
+                margin-right: 10px;
+                background-size: cover;
+                background-position: center;
+            }
+            .carousel-item img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="carousel-item"><img src="{% static 'img/about_png/1.png' %}" alt="Изображение 1"></div>
+                <div class="carousel-item"><img src="{% static 'img/about_png/2.png' %}" alt="Изображение 2"></div>
+                <div class="carousel-item"><img src="{% static 'img/about_png/3.png' %}" alt="Изображение 3"></div>
+                <div class="carousel-item"><img src="{% static 'img/about_png/4.png' %}" alt="Изображение 4"></div>
+                <div class="carousel-item"><img src="{% static 'img/about_png/5.png' %}" alt="Изображение 5"></div>
+            </div>
+        </div>
+
+        <script>
+            const carouselContainer = document.querySelector('.carousel-container');
+            let currentIndex = 0;
+
+            function showNextSlide() {
+                const slides = carouselContainer.querySelectorAll('.carousel-item');
+                const nextIndex = (currentIndex + 1) % slides.length;
+                
+                slides.forEach((slide, index) => {
+                    slide.style.transform = `translateX(${nextIndex * 310}px)`;
+                });
+
+                currentIndex = nextIndex;
+            }
+
+            function initCarousel() {
+                showNextSlide();
+
+                setInterval(showNextSlide, 5000); // Переключение каждые 5 секунд
+            }
+
+            window.addEventListener('load', initCarousel);
+        </script>
+    </body>
+{% endblock %}
