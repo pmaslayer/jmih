@@ -1,7 +1,0 @@
-.rounded-text {
-  background-color: #f0f0f0; /* Пример цвета фона */
-  color: #333; /* Цвет текста */
-  padding: 10px; /* Поля вокруг текста */
-  border-radius: 20px; /* Закругление углов */
-  border-width: 1px; /* Уменьшено с 10px до 1px */
-}
