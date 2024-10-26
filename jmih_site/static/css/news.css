@@ -1,0 +1,168 @@
+/* контейнер под last news */
+.con-last-news {
+  position: relative;
+  width: auto;
+  height: 1100px;
+  background-color: #fdfdfd;
+  border: 1px solid #e9e7e7;
+  z-index: 0;
+  min-height: 80vh;
+}
+
+
+/* последние новости */
+.last-news-text {
+  position: relative;
+  /*высота */
+  top: 80px;
+  /*где находится текст */
+  text-align: left;
+  /*отступ с правой стороны */
+  padding-left: 200px;
+  transform: translateY(-50%);
+  width: 100%;
+  z-index: 2;
+}
+
+/* анимация текста последние новости */
+.text-layer {
+  opacity: 0.01;
+  animation: fadeInOut 5s linear forwards;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInOut {
+  0%, 5% { opacity: 0.01; transform: translateY(20px); }
+  15% { opacity: 1; transform: translateY(0); }
+  85%, 90%, 95%, 100% { opacity: 1; transform: translateY(0); }
+}
+
+.text-layer:nth-child(even) {
+  animation-delay: 10s;
+}
+
+.text-layer span {
+  font-size: 24px;
+  letter-spacing: 2px;
+  line-height: 40px;
+  padding: 0 20px;
+}
+
+/* Хуйня под карточки */
+:root {
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  /* РАЗМЕР КАТОЧКИ */
+  --width-container: 2300px;
+}
+
+* {
+  border: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+body {
+  height: 100%;
+}
+
+/* .hero-section {
+  align-items: flex-start;
+  display: flex;
+  min-height: 100vh;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+} */
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+}
+
+@media(min-width: 540px) {
+  .card-grid {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 960px) {
+  .card-grid {
+      grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+.card {
+  list-style: none;
+  position: absolute;
+  bottom: 100px;
+}
+
+.card:before {
+  content: '';
+  display: block;
+  padding-bottom: 160%;
+  width: 100%;
+  bottom: 100px;
+
+}
+
+.card__background {
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-m);
+  filter: brightness(0.9) saturate(1.2) contrast(0.85) blur(4px);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  transition: filter 300ms ease-in-out;
+}
+
+.card:hover .card__background {
+  filter: brightness(1) saturate(1.5) contrast(1.2) blur(0px);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background {
+  filter: brightness(0.9) saturate(1.3) contrast(1.1) blur(2px);
+}
+
+.card__content {
+  /*позиция текста!!!!*/
+  top: 10px;
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+
+}
+
+.card__category {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading {
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}

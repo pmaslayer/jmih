@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'SFPRO_1';
+    src: url('font/sf-pro-display_semibold.woff2') format('woff2');
+}
+
+.custom-text-medium {
+    font-size: 450% !important;
+    font-family: 'SFPRO_1', sans-serif;
+}

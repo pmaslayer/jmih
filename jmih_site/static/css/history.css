@@ -1,0 +1,49 @@
+.con-last {
+    position: relative;
+    width: auto;
+    height: 800px;
+    left: 60px;
+    background-color: #fdfdfd;
+    border: 1px solid #e9e7e7;
+    z-index: 0;
+    border-radius: 100px;
+}
+
+/*закругление фото и размер */
+.con-photo {
+    position: relative;
+    bottom: 285px;
+    width: 1000px;
+    height: 800px;
+    border-radius: 100px;
+
+}
+
+/*хуй знает как это обьяснить, но фото круглое ))) */
+.con-photo .image-class {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* or 'contain' depending on your needs */
+    border-radius: inherit; /* To maintain the rounded corners */
+}
+/*позиция заголовка */
+.history-heading {
+    position: relative;
+    left: 1050px;
+    top: 30px;
+}
+
+@font-face {
+    font-family: 'SFPRO_2';
+    src: url('font/sf-pro-text_regular.woff2') format('woff2');
+}
+
+/*позиция текста под заголовком */
+.history-text {
+    position: relative;
+    left: 1050px;
+    top: 30px;
+    font-size: 150%;
+    font-family: 'SFPRO_2', sans-serif;
+}
