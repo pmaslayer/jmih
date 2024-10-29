@@ -1,0 +1,210 @@
+/* Определение слоев стилей */
+@layer base, rhythm, layout, components, default, overwrites;
+
+html {
+  /* Создаем правило скролла для элемента html */
+  scroll-snap-type: y mandatory;
+
+  /* Создаем область видимости времени, чтобы можно было целять любым элементом на странице */
+  timeline-scope: --section, --main, --site-header;
+}
+
+/* Мы хотим совместить эти цвета для лучшего эффекта плавности */
+/* Но экспериментируйте с ними (и добавьте цвет к секции), чтобы увидеть, что происходит */
+
+body,
+.content {
+  background-color: var(--color-background, rgb(68, 68, 68));
+  
+}
+
+main {
+  view-timeline: --main;
+}
+
+.section {
+  /* Создаем правило скролла для элемента section */
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+
+  /* Прикрепляем область видимости времени к элементу section*/
+  view-timeline: --section;
+
+  /* Устанавливаем каждую секцию на полную динамическую высоту viewport */
+  height: 100dvh;
+}
+
+.content {
+  /* Зафиксируйте содержимое, чтобы оно не прокручивалось вместе со страницей */
+  overflow: hidden;
+  position: fixed;
+  inset: 0;
+
+  /* Анимируйте содержимое на основе прокрутки страницы */
+  --contrast: 4;
+  --blur: 0.5rem;
+
+  animation: blink ease-in-out both;
+  animation-timeline: --section;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    filter: blur(var(--blur)) contrast(var(--contrast));
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  50% {
+    filter: blur(0) contrast(1);
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+/* 
+  Это немного хитрый способ получить индикатор работать, потому что я ленив.
+  Мы переводим точку сверху вниз родительского элемента,
+  используя позицию прокрутки браузера как область видимости времени.
+  Она не действительно соответствует прокрутке секций, но кажется таковым.
+*/
+
+.indicator::before {
+  animation: indicate linear both;
+  animation-timeline: --main;
+  animation-range: contain;
+}
+
+/* И мы явно устанавливаем цвета, потому что: ленивый комментарий выше */
+@keyframes indicate {
+  0% {
+    --color-indicator: var(--color-primary);
+    transform: translateY(0);
+  }
+
+  25% {
+    --color-indicator: var(--color-yellow);
+  }
+
+  50% {
+    --color-indicator: var(--color-secondary);
+  }
+
+  75% {
+    --color-indicator: var(--color-red);
+  }
+
+  100% {
+    --color-indicator: var(--color-purple);
+    transform: translateY(
+      calc(var(--indicator-total-height) - var(--indicator-size))
+    );
+  }
+}
+
+/* Удалить градиентный индикатор при прокрутке до конца (виден на маленьких экранах) */
+
+.site-header label:last-of-type {
+  view-timeline: --site-header inline;
+}
+
+.site-header::after {
+  animation: fade-scroll ease-in-out both;
+  animation-timeline: --site-header;
+  animation-range: entry-crossing;
+}
+
+@keyframes fade-scroll {
+  0% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* Изменить анимацию в зависимости от выбранного радио-кнопки */
+body:has([value="horizontal-scroll"]:checked) .content {
+  /* 
+    Единственная причина повторения этих двух свойств вместо просто установки `animation-name`
+    это чтобы плагин-полифил мог их подхватить
+    Они нестабильны и часто застревают. Возможно, нужно
+    обновить страницу и выбрать опцию перед прокруткой
+  */
+  animation: horizontal-scroll ease-in-out both;
+  animation-timeline: --section;
+}
+
+body:has([value="backwards-scroll"]:checked) .content {
+  animation: backwards-scroll ease-in-out both;
+  animation-timeline: --section;
+}
+
+body:has([value="zoom-scroll"]:checked) .content {
+  animation: zoom-scroll ease-in-out both;
+  animation-timeline: --section;
+}
+
+/* Альтернативные анимации */
+/* Очень интересно попробовать */
+@keyframes horizontal-scroll {
+  0% {
+    transform: translate3d(100%, 0%, 0);
+  }
+
+  50% {
+    transform: none;
+  }
+
+  100% {
+    transform: translate3d(-100%, 0%, 0);
+  }
+}
+
+/* Путаница, попробуйте */
+@keyframes backwards-scroll {
+  0% {
+    transform: translate3d(0%, -100%, 0);
+  }
+
+  50% {
+    transform: none;
+  }
+
+  100% {
+    transform: translate3d(0%, 100%, 0);
+  }
+}
+
+/* WIP */
+@keyframes zoom-scroll {
+  0% {
+    filter: blur(5rem);
+    transform: scale(0);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  50% {
+    filter: blur(0);
+    transform: none;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  100% {
+    filter: blur(3rem);
+    transform: scale(1.5);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* 
+  Фактическое стилирование страницы находится в отдельном файле стилей, чтобы не засорять
+  этот дизайнерский прототип неуместными или запутанными кодами
+
+  https://codepen.io/giana/pen/rNRzgRj
+*/
