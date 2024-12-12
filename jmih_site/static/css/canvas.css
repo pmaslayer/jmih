@@ -44,7 +44,7 @@ body {
 }
 /* прямоугольник с лого и текстом */
 .rectangle {
-    width: auto;
+    width: 1915px;
     height: 260px;
     background-color: #ffffff;
     border: 1px solid #dddddd;

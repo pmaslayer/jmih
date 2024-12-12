@@ -1,0 +1,27 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main_font.css' %}">
+<link rel="stylesheet" href="{% static 'css/merch_con.css' %}">
+
+<div class="con-asd-bsd">
+    <div class="last-text-con">
+        <div class="custom-text-medium">
+            Мерч:
+        </div>
+    </div>
+    <div class="pos-text-left">
+        <div class="custom-text-low">
+            Мы<br>
+            создаем
+        </div>
+    </div>
+    <div class="pos-text-right">
+        <div class="custom-text-low">
+            Тренды<br>
+            в индустрии
+        </div>
+    </div>
+    <div class="pos-merch-con">
+        {% include 'main_page/merch.html' %}
+    </div>
+    </div>
+</div>

@@ -1,4 +1,4 @@
-.con-last {
+.con-last-history{
     position: relative;
     width: auto;
     height: 800px;
@@ -11,8 +11,8 @@
 
 /*закругление фото и размер */
 .con-photo {
-    position: relative;
-    bottom: 285px;
+    position: absolute;
+    bottom: 0px;
     width: 1000px;
     height: 800px;
     border-radius: 100px;
@@ -21,7 +21,7 @@
 
 /*хуй знает как это обьяснить, но фото круглое ))) */
 .con-photo .image-class {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     object-fit: cover; /* or 'contain' depending on your needs */
@@ -29,9 +29,9 @@
 }
 /*позиция заголовка */
 .history-heading {
-    position: relative;
+    position: absolute;
     left: 1050px;
-    top: 30px;
+    top: 180px;
 }
 
 @font-face {
@@ -41,9 +41,9 @@
 
 /*позиция текста под заголовком */
 .history-text {
-    position: relative;
+    position: absolute;
     left: 1050px;
-    top: 30px;
+    top: 280px;
     font-size: 150%;
     font-family: 'SFPRO_2', sans-serif;
 }

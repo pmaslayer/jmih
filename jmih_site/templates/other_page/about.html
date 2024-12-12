@@ -1,0 +1,67 @@
+<
+!DOCTYPE html>
+{% load static %}
+{% comment %}
+    <script src="{% static 'js/dot.js' %}"></script>
+    
+{% endcomment %}<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolly Point</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 500vh;
+        }
+        .scrolly-point {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            transition: transform 0.3s ease-out;
+        }
+        .scrolly-point::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            right: -50%;
+            bottom: -50%;
+            background-color: rgba(51, 51, 51, 0.5);
+            border-radius: 50%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <div class="scrolly-point">
+        <span>•</span>
+    </div>
+
+    <!-- Content goes here -->
+    <h1>Welcome to Scrolly Point Example</h1>
+    <p>This page demonstrates a scrolly point effect similar to the one on the provided example.</p>
+    <p>The black dot will move around the screen as you scroll, creating a dynamic visual effect.</p>
+    <p><strong>How it works:</strong></p>
+    <ul>
+        <li>The dot is positioned absolutely in the center of the viewport.</li>
+        <li>As you scroll, the dot moves along with the scrolling element.</li>
+        <li>The movement is smooth thanks to CSS transitions.</li>
+    </ul>
+</body>
+</html>
