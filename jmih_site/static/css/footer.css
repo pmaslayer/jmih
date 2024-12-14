@@ -13,8 +13,8 @@
 }
 
 .card-site {
-	padding-bottom: 30px;
-	font-size: 300% !important;
+	padding-bottom: 19px;
+	font-size: 270% !important; 
     font-family: 'SFPRO_1', sans-serif;
 }
 
@@ -50,8 +50,8 @@ ul{
    width: 23%;
    padding: 0 15px;
 }
-.footer-col h4{
-	font-size: 18px;
+.footer-col h4{                         
+	font-size: 30px;
 	color: rgba(0, 0, 0, 0.7);;
 	text-transform: capitalize;
 	margin-bottom: 35px;

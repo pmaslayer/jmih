@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'SFPRO_4';
+    src: url('font/sf-pro-display_semibold.woff2') format('woff2');
+}
+
+.header {
+    font-family: 'SFPRO_4', sans-serif;
+}

@@ -1,15 +1,4 @@
 {% load static %}
-{% comment %} 
- ПЕРВАЯ ВЕРСИЯ, ВЗЯТЬ ОТТУДА КНОПКУ ПОДДЕРЖКИ
-<div class="con-footer">
-  <footer class="border-top text-center py-3">
-    <p>© JMIH INDUSTRY</p>
-  </footer>
-  <div class="support-button">
-    <img src="{% static 'img/home_page/hotel.png' %}" width="80" height="80">
-  </div>
-</div> {% endcomment %}
-
 <link rel="stylesheet" href="{% static 'css/footer.css' %}">
 
 <head>
@@ -19,50 +8,52 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 </head>
-<div class="custom-text-footer">
 	<body>
 	<footer class="footer">
 		<div class="container">
-			<div class="row">
-				<div class="card-site">
-					<h3>Карта сайта</h3>
-				</div>
-				<div class="footer-col">
-					<ul>
-						<li><a href="#">История</a></li>
-						<li><a href="#">Проекты</a></li>
-						<li><a href="#">Партнеры</a></li>
-						<li><a href="#">Команда</a></li>
-					</ul>
-				</div>
-				<div class="footer-col">
-					<ul>
-						<li><a href="#">Мерч</a></li>
-						<li><a href="#">Карьера</a></li>
-						<li><a href="#">Новости</a></li>
-						<li><a href="#">Поддержка</a></li>
-					</ul>
-				</div>
-				<div class="footer-col">
-					<ul>
-						<li><a href="#">Система лояльности</a></li>
-						<li><a href="#">Политика компании</a></li>
-						<li><a href="#">Условия сайта</a></li>
-						<li><a href="#">О нас</a></li>
-					</ul>
-				</div>
-				<div class="footer-col">
-					<h4>Поддержка</h4>
-					<div class="social-links">
-						<a href="#"><i class="fab fa-facebook-f"></i></a>
-						<a href="#"><i class="fab fa-twitter"></i></a>
-						<a href="#"><i class="fab fa-instagram"></i></a>
-						<a href="#"><i class="fab fa-linkedin-in"></i></a>
+			<div class="card-site">
+				<h3>Карта сайта:</h3>
+			</div>
+			<div class="custom-text-footer">
+				<div class="row">
+					<div class="footer-col">
+						<ul>
+							<li><a href="#">История</a></li>
+							<li><a href="#">Проекты</a></li>
+							<li><a href="#">Партнеры</a></li>
+							<li><a href="#">Команда</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<ul>
+							<li><a href="#">Мерч</a></li>
+							<li><a href="#">Карьера</a></li>
+							<li><a href="#">Новости</a></li>
+							<li><a href="#">Поддержка</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<ul>
+							<li><a href="#">Система лояльности</a></li>
+							<li><a href="#">Политика компании</a></li>
+							<li><a href="#">Условия сайта</a></li>
+							<li><a href="#">О нас</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+						<div class="social-links">
+							<a href="#"><i class="fab fa-facebook-f"></i></a>
+							<a href="#"><i class="fab fa-twitter"></i></a>
+							<a href="#"><i class="fab fa-instagram"></i></a>
+							<a href="#"><i class="fab fa-linkedin-in"></i></a>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+		<div class="support-button">
+			<img src="{% static 'img/home_page/help.png' %}" width="70" height="0">
+		</div>
 	</footer>
 
 	</body>
-</div>

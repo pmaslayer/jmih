@@ -1,3 +1,13 @@
+@font-face {
+    font-family: 'SFPRO_3';
+    src: url('font/sf-pro-display-bold.woff2') format('woff2');
+}
+
+.custom-text-low {
+    font-size: 400% !important;
+    font-family: 'SFPRO_3',Arial;
+}
+
 .con-asd-bsd {
     position: relative;
     top: 40px;
@@ -37,14 +47,4 @@
     position: absolute;
     top: 80px;
     left: 150px;
-}
-
-@font-face {
-    font-family: 'SFPRO_1';
-    src: url('font/sf-pro-display_semibold.woff2') format('woff2');
-}
-
-.custom-text-low {
-    font-size: 500% !important;
-    font-family: 'SFPRO_1', sans-serif;
 }
