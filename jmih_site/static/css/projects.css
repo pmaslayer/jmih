@@ -50,7 +50,9 @@
     overflow: hidden;
     text-decoration: none;
     top: 90px;
-    
+    content: '';
+    padding-bottom: 160%;
+    bottom: 100px;    
   }
   
   .card__image {

@@ -1,0 +1,20 @@
+@font-face {
+    font-family: 'SFPRO_history-text';
+    src: url('font/sf-pro-display_semibold.woff2') format('woff2');
+}
+
+.dogovor_oferty_heading {
+    font-family: 'SFPRO_history-text', sans-serif;
+    position: relative;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.dogovor_oferty_text {
+    position: absolute;
+    font-family: 'SFPRO_history-text', sans-serif;
+    height: 4500px;
+    width: 1000px;
+    text-align:left;
+    left: 300px;
+}

@@ -12,4 +12,6 @@ urlpatterns = [
     path('about/', views.about, name='about'),
     path('offices/', views.offices, name='offices'),
     path('partners/', views.partners, name='partners'),
+    path('politika_konfidentsialnosti', views.politika_konfidentsialnosti, name='politika_konfidentsialnosti'),
+    path('dogovor_oferty', views.dogovor_oferty, name='dogovor_oferty'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

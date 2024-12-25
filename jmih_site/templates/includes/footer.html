@@ -35,8 +35,8 @@
 					<div class="footer-col">
 						<ul>
 							<li><a href="#">Система лояльности</a></li>
-							<li><a href="#">Политика компании</a></li>
-							<li><a href="#">Условия сайта</a></li>
+							<li><a href="{% url 'pages:politika_konfidentsialnosti' %}">Политика компании</a></li>
+							<li><a href="{% url 'pages:dogovor_oferty' %}">Договор оферты</a></li>
 							<li><a href="#">О нас</a></li>
 						</ul>
 					</div>
@@ -51,9 +51,11 @@
 				</div>
 			</div>
 		</div>
-		<div class="support-button">
-			<img src="{% static 'img/home_page/help.png' %}" width="70" height="0">
-		</div>
+		{% comment %} <div class="support-button">
+			<img src="{% static 'img/home_page/help.png' %}" width="70" height="10">
+		</div> {% endcomment %}
 	</footer>
-
+	{% comment %} <div class="position_logo_footer">
+		<img src="{% static 'img/home_page/large_black_new.png' %}" height="400">
+	</div> {% endcomment %}
 	</body>
