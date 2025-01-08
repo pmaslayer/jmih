@@ -9,7 +9,7 @@ body {
 .scrolling-text {
     position: relative;
     /*высота */
-    top: -55%;
+    top: -53%;
     /*где находится текст */
     text-align: right;
     /*отступ с правой стороны */
@@ -49,12 +49,11 @@ body {
     height: 260px;
     background-color: #ffffff;
     border: 1px solid #dddddd;
+    padding-left: 100px;
+    padding-top: 25px;
 }
 /*лого позиционирование */
-.rectangle_logo {
-    position: relative;
-    padding-left: 30px;
-}
+
 
 /* кнопка помощи */
 .support-button {

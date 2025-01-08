@@ -1,7 +1,9 @@
 .con-asd {
+    position: relative;
     width: auto;
     height: 800px;
     background-color: #ffffff;
+    bottom: 130px;
 }
 
 /* последние новости */
@@ -29,7 +31,6 @@
   
   body {
     font-family: 'Noto Sans JP', sans-serif;
-    background-color: #fef8f8;
   }
   
   .cards {

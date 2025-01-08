@@ -11,10 +11,10 @@
 }
 
 .dogovor_oferty_text {
-    position: absolute;
+    position: relative;
     font-family: 'SFPRO_history-text', sans-serif;
-    height: 4500px;
+    height: auto;
     width: 1000px;
     text-align:left;
-    left: 300px;
-}
+    left: 500px;
+} 

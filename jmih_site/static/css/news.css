@@ -23,30 +23,6 @@
   z-index: 2;
 }
 
-/* анимация текста последние новости */
-.text-layer {
-  opacity: 0.01;
-  animation: fadeInOut 5s linear forwards;
-  animation-fill-mode: forwards;
-}
-
-@keyframes fadeInOut {
-  0%, 5% { opacity: 0.01; transform: translateY(20px); }
-  15% { opacity: 1; transform: translateY(0); }
-  85%, 90%, 95%, 100% { opacity: 1; transform: translateY(0); }
-}
-
-.text-layer:nth-child(even) {
-  animation-delay: 10s;
-}
-
-.text-layer span {
-  font-size: 24px;
-  letter-spacing: 2px;
-  line-height: 40px;
-  padding: 0 20px;
-}
-
 /* Хуйня под карточки */
 :root {
   --background-dark: #2d3548;
