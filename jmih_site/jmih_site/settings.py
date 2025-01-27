@@ -86,11 +86,11 @@ WSGI_APPLICATION = 'jmih_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'main_page',
-        'USER': 'mearbye',
-        'PASSWORD': 'edcqazxsw890',
-        'HOST': 'localhost', 
-        'PORT': '5432',
+        'NAME': 'jmih',
+        'USER': 'jmih',
+        'PASSWORD': 'jmih',
+        'HOST': 'localhost',
+        'PORT': '5433',
     }
 }
 
