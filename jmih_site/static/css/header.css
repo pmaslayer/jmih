@@ -5,13 +5,14 @@
 
 .header {
     font-family: 'SFPRO_4', sans-serif;
+    font-size: 100%;
 }
 
 .raise {
     transition-delay: 0.05s;
     transition: all 0.1s ease-out;
 }
-  
+
 .raise:hover,
 .raise:focus {
     transform: translateY(-0.2em);

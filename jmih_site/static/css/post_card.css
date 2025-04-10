@@ -1,0 +1,38 @@
+/* Настройка анимации */
+.modal.fade .modal-dialog {
+    transition: 
+        transform 0.2s cubic-bezier(0.1, 0.2, 0.1, 1), 
+        opacity 0.2s ease-out, 
+        filter 0.2s ease-out;
+    transform: translate(0, -25%);
+    opacity: 0;
+    filter: blur(4px);
+    transform-origin: top center;
+    perspective: 1000px;
+    backface-visibility: hidden;
+}
+
+.modal.show .modal-dialog {
+    transform: translate(0, 0);
+    opacity: 1;
+    filter: blur(0);
+}
+
+/* Дополнительные стили для эффекта */
+.modal-content {
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    transition: border-radius 0.3s ease-in-out;
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+/* Анимация для фона */
+.modal-backdrop.show {
+    opacity: 0.5;
+    transition: opacity 0.3s ease-out;
+    pointer-events: none;
+}
+

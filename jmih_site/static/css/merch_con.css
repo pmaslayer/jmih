@@ -4,7 +4,7 @@
 }
 
 .custom-text-low {
-    font-size: 400% !important;
+    font-size: 350% !important;
     font-family: 'SFPRO_3',Arial;
 }
 
@@ -15,31 +15,17 @@
     background-color: #ffffff;
 }
 
-/* последние новости */
-.last-text-con{
-    position: absolute;
-    /*высота */
-    top: 140px;
-    /*где находится текст */
-    text-align: left;
-    /*отступ с правой стороны */
-    padding-left: 205px;
-    transform: translateY(-50%);
-    width: 100%;
-    z-index: 2;
-}
-
 .pos-text-left {
     position: absolute;
-    top: 300px;
+    top: 34%;
     text-align: left;
-    padding-left: 400px;
+    padding-left: 4%;
 }
 
 .pos-text-right {
     position:absolute;
-    top: 305px;
-    padding-left: 1250px;
+    top: 34%;
+    padding-left: 82%;
 }
 
 .pos-merch-con {

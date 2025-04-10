@@ -48,19 +48,7 @@ body {
     width: 1915px;
     height: 260px;
     background-color: #ffffff;
-    border: 1px solid #dddddd;
     padding-left: 100px;
     padding-top: 25px;
 }
 /*лого позиционирование */
-
-
-/* кнопка помощи */
-.support-button {
-    position: fixed;
-    left: 93%;
-    bottom: 20px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    z-index: 9999; /* Высокий индекс */
-}

@@ -48,8 +48,6 @@ ul {
 
 .footer {
     position: relative;
-    width: 100%;
-    height: auto;
     background-color: rgba(128, 128, 128, 0.1);
     padding: 70px 0;
     box-sizing: border-box;
@@ -137,16 +135,12 @@ ul {
 }
 
 
-.position_logo_footer {
-    position: relative;
-    height: 100px;
-    width: 100px;
-    margin-left: 1100px;
-    bottom: 500px;
-}
-
 .position_logo_footer img {
-    width: 670px;
-    height: 670px;
+    width: 35%;
+    height: auto;
+    margin-left: 60%;
+    margin-top: -15%;
     object-fit: contain; /* или cover, в зависимости от желаемого результата */
 }
+
+

@@ -1,5 +1,6 @@
+{% extends "base.html" %}
 {% load static %}
-<!DOCTYPE html>
+{% comment %} <!DOCTYPE html>
 <link rel="stylesheet" href="{% static 'css/about.css' %}">
 <script src="{% static 'js/about.js' %}"></script>
 <body>
@@ -29,4 +30,235 @@
 
 <script src="script.js"></script>
 </body>
-</html>
+</html> {% endcomment %}
+
+
+{% block content %}
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/main_font.css' %}">
+<link rel="stylesheet" href="{% static 'css/projects.css' %}">
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
+
+
+<div data-aos="fade-up">
+  <div class="con-asd">
+      <div class="last-text">
+          <div class="custom-text-medium">
+              Мы больше чем ты думаешь
+          </div>
+      </div>
+      <div>
+          <ul class="cards">
+              <li>
+                <a href="" class="card">
+                  <img src="{% static 'img/komanda/fbj.jpg' %}" class="card__image">
+                  <div class="card__overlay">
+                    <div class="card__header">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                      <img src="{% static 'img/projects/fbj.png' %}" class="card__thumb">
+                      <div class="card__header-text">
+                        <h3 class="card__title">FBJ</h3>            
+                      </div>
+                    </div>
+                    <p class="card__description">🍕FBJ — это сочетание изысканного вкуса, эстетики и скорости 🍔
+                      
+                      🧡Наслаждайтесь нашей вкусной едой, которая не только порадует ваши вкусовые рецепторы, но и станет украшением вашего стола. Быстрая доставка сделает ваш вечер особенным🧡<br>
+
+                      <div class="wrapper">
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fab fa-telegram"></i>
+                          </div>
+                          <span>Telegram</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          </div>
+                          <span>2gis</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fab fa-instagram"></i>
+                          </div>
+                          <span>Instagram</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fab fa-yandex"></i>
+                          </div>
+                          <span>Яндекс</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fa fa-coffee" aria-hidden="true"></i>
+                          </div>
+                          <span>FBJ FOOD</span>
+                        </div>
+                      </div>
+
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="" class="card">
+                  <img src="{% static 'img/komanda/hub.jpg' %}" class="card__image">
+                  <div class="card__overlay">        
+                    <div class="card__header">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                      <img src="{% static 'img/projects/hub.png' %}" class="card__thumb">
+                      <div class="card__header-text">
+                        <h3 class="card__title">JMIH HUB</h3>
+                      </div>
+                    </div>
+                    <p class="card__description">Задумайтесь, зачем тратить своё время на бесполезные вещи, если его можно потратить в JMIH HUB?👾
+
+                      Пусть ничто не помешает вам насладиться своим свободным вечером в эпичной катке с друзьями, в компании наших охлаждающих напитков и самых различных вкусностей!💛
+
+                      <div class="wrapper">
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fab fa-telegram"></i>
+                          </div>
+                          <span>Telegram</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          </div>
+                          <span>2gis</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fab fa-instagram"></i>
+                          </div>
+                          <span>Instagram</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fab fa-yandex"></i>
+                          </div>
+                          <span>Яндекс</span>
+                        </div><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap">
+
+                      </div>
+
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="" class="card">
+                  <img src="{% static 'img/komanda/lounge.jpg' %}" class="card__image">
+                  <div class="card__overlay">
+                    <div class="card__header">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                     
+                      <img src="{% static 'img/projects/lounge.png' %}" class="card__thumb">
+                      <div class="card__header-text">
+                        <h3 class="card__title">JMIH LOUNGE</h3>
+                        <span class="card__tagline"></span>            
+                      </div>
+                    </div>
+                    <p class="card__description">💚Добро пожаловать в Jmih&Lounge — ваше идеальное место для отдыха и веселья💚
+
+                      Здесь каждый коктейль💘— это искусство, а атмосфера заставляет забыть о повседневных заботах. Присоединяйтесь к нам и откройте для себя мир уникальных вкусов!
+                      
+                      <div class="wrapper">
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fab fa-telegram"></i>
+                          </div>
+                          <span>Telegram</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          </div>
+                          <span>2gis</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fab fa-instagram"></i>
+                          </div>
+                          <span>Instagram</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fab fa-yandex"></i>
+                          </div>
+                          <span>Яндекс</span>
+                        </div>
+                      </div>
+                  
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="" class="card">
+                  <img src="{% static 'img/komanda/7.jpg' %}" class="card__image">
+                  <div class="card__overlay">
+                    <div class="card__header">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                      <img src="{% static 'img/projects/shop.png' %}" class="card__thumb">
+                      <div class="card__header-text">
+                        <h3 class="card__title">JMIH VAPESHOP</h3>
+                      </div>          
+                    </div>
+                    <p class="card__description">JMIH VAPESHOP - Мы предлагаем разнообразные вейп-устройства, жидкости, аксессуары и расходные материалы от проверенных производителей, обеспечивая качество и безопасность.
+
+                      <div class="wrapper">
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fab fa-telegram"></i>
+                          </div>
+                          <span>Telegram</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fa fa-map-marker" aria-hidden="true"></i>
+                          </div>
+                          <span>2gis</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fab fa-instagram"></i>
+                          </div>
+                          <span>Instagram</span>
+                        </div>
+                        <div class="button">
+                          <div class="icon">
+                            <i class="fab fa-yandex"></i>
+                          </div>
+                          <span>Яндекс</span>
+                        </div>
+                      </div>
+
+                    </p>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a href="" class="card">
+                  <img src="{% static 'img/komanda/new_project.jpg' %}" class="card__image">
+                  <div class="card__overlay">
+                    <div class="card__header">
+                      <svg class="card__arc" xmlns="http://www.w3.org/2000/svg"><path /></svg>                 
+                      <img src="{% static 'img/komanda/new_project.jpg' %}" class="card__thumb">
+                      <div class="card__header-text">
+                        <h3 class="card__title">?</h3>
+                      </div>          
+                    </div>
+                    <p class="card__description">?</p>
+                  </div>
+                </a>
+              </li> 
+            </ul>
+      </div>
+  <div>
+</div>
+{% endblock  %}
+

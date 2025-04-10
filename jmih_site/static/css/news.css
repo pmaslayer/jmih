@@ -4,7 +4,6 @@
   width: auto;
   height: 1050px;
   background-color: #ffffff;
-  z-index: 0;
   min-height: 80vh;
 }
 
@@ -43,15 +42,7 @@
   box-sizing: border-box;
 }
 
-html {
-  height: 100%;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
-}
 
-body {
-  height: 100%;
-}
 
 /* .hero-section {
   align-items: flex-start;
@@ -125,7 +116,6 @@ body {
   left: 0;
   padding: var(--spacing-l);
   position: absolute;
-
 }
 
 .card__category {

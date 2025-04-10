@@ -5,7 +5,7 @@
     position: absolute;
     width: 400px;
     height: 590px;
-    left: 600px;
+    left: 1000px;
     background-color: #ffffff;
     border: 1px solid #e9e7e7;
     z-index: 0;
@@ -42,6 +42,185 @@
 }
 
 .con-last::-webkit-scrollbar {
+  display: none; /* Скрываем полосу прокрутки */
+}
+
+.section {
+    /* Уменьшаем высоту секций, чтобы они влезали в .con-last */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    view-timeline: --section;
+    height: 100%;
+    padding: 20px;
+}
+
+.content {
+    overflow: hidden;
+    position: relative; /* Снимаем фиксированное позиционирование */
+    inset: auto;
+
+    /* Анимация содержимого на основе прокрутки */
+    --contrast: 4;
+    --blur: 1.0rem;
+
+    animation: blink ease-in-out both;
+    animation-timeline: --section;
+}
+
+@keyframes blink {
+    0%, 100% {
+        filter: blur(var(--blur)) contrast(var(--contrast));
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    25%, 75% {
+        filter: blur(var(--blur));
+        opacity: 0.5;
+        visibility: visible;
+    }
+    
+    50% {
+        filter: blur(0) contrast(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+/*Создаем второе окно под доп шмот*/
+.con-last2 {
+    position: absolute;
+    width: 400px;
+    height: 590px;
+    left: 178px;
+    background-color: #ffffff;
+    border: 1px solid #e9e7e7;
+    z-index: 0;
+    border-radius: 100px;
+
+    /* Создаем отдельный скролл для .con-last */
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory 0.05s;
+    transition: scroll-snap-type 0.1s ease-out;    
+    timeline-scope: --section, --main, --site-header;
+}
+
+.text-am {
+  position: absolute;
+  padding-top: 30px;
+}
+
+.con-last2 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* или "contain", если нужно сохранить пропорции изображения */
+}
+
+/* Добавляем прокрутку при наведении курсора на окно */
+* {
+    overscroll-behavior: none;
+    
+}
+
+.con-last2 {
+    overscroll-behavior: contain;
+    overflow: auto;
+}
+
+.con-last2::-webkit-scrollbar {
+  display: none; /* Скрываем полосу прокрутки */
+}
+
+.section {
+    /* Уменьшаем высоту секций, чтобы они влезали в .con-last */
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    view-timeline: --section;
+    height: 100%;
+    padding: 20px;
+}
+
+.content {
+    overflow: hidden;
+    position: relative; /* Снимаем фиксированное позиционирование */
+    inset: auto;
+
+    /* Анимация содержимого на основе прокрутки */
+    --contrast: 4;
+    --blur: 1.0rem;
+
+    animation: blink ease-in-out both;
+    animation-timeline: --section;
+}
+
+@keyframes blink {
+    0%, 100% {
+        filter: blur(var(--blur)) contrast(var(--contrast));
+        opacity: 0;
+        visibility: hidden;
+    }
+    
+    25%, 75% {
+        filter: blur(var(--blur));
+        opacity: 0.5;
+        visibility: visible;
+    }
+    
+    50% {
+        filter: blur(0) contrast(1);
+        opacity: 1;
+        visibility: visible;
+    }
+}
+
+
+
+/*Создаем второе окно под доп шмот*/
+.con-last3 {
+    position: absolute;
+    width: 400px;
+    height: 590px;
+    left: 589px;
+    background-color: #ffffff;
+    border: 1px solid #e9e7e7;
+    z-index: 0;
+    border-radius: 100px;
+
+    /* Создаем отдельный скролл для .con-last */
+    overflow-y: auto;
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory 0.05s;
+    transition: scroll-snap-type 0.1s ease-out;    
+    timeline-scope: --section, --main, --site-header;
+}
+
+.text-am {
+  position: absolute;
+  padding-top: 30px;
+}
+
+.con-last3 img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* или "contain", если нужно сохранить пропорции изображения */
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+/* Добавляем прокрутку при наведении курсора на окно */
+* {
+    overscroll-behavior: none;
+    
+}
+
+.con-last3 {
+    overscroll-behavior: contain;
+    overflow: auto;
+}
+
+.con-last3::-webkit-scrollbar {
   display: none; /* Скрываем полосу прокрутки */
 }
 

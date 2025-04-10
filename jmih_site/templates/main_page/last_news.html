@@ -2,13 +2,15 @@
 <link rel="stylesheet" href="{% static 'css/main_font.css' %}">
 <link rel="stylesheet" href="{% static 'css/news.css' %}">
 <script src="{% static 'js/news.js' %}"></script>
-<div class="con-last-news">
-        <div class="custom-text-medium">
-            <div class="last-news-text ">
-                <div class="text-layer">
-                    Последние новости
+    <div class="con-last-news">
+            <div class="custom-text-medium">
+                <div class="last-news-text">
+                    <div class="text-layer">
+                        Последние новости
+                    </div>
                 </div>
             </div>
+            {%include 'main_page/post_card.html'%}
         </div>
-        {% include 'main_page/post_card.html' %}
-</div> 
+    </div>
+</div>
