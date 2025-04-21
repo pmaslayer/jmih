@@ -13,3 +13,7 @@
     font-family: 'SFPRO_1', sans-serif;
 }
 
+.custom-text-low {
+    font-size: 110% !important;
+    font-family: 'SFPRO_history-text', sans-serif;
+}

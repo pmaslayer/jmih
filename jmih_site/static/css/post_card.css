@@ -36,3 +36,65 @@
     pointer-events: none;
 }
 
+
+/* Общие стили для страницы */
+.page-body {
+    margin: 0;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
+  /* Стили для контейнера */
+.container-card {
+    background: #f5f5f775;
+    border-radius: 20px;
+    max-width: 800px;
+    padding: 40px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+  
+  /* Стили для заголовка h3 */
+.subtitle {
+    font-size: 1.5em;
+    margin: 0 0 20px;
+    color: #333;
+}
+  
+  /* Стили для заголовка h1 */
+.title {
+    font-size: 2.5em;
+    margin: 0 0 20px;
+    color: #111;
+}
+  
+  /* Стили для абзаца */
+.description {
+    font-size: 1.05em;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+  
+  /* Стили для выделенного текста */
+.highlight {
+    font-weight: bold;
+    color: #000;
+}
+  
+  /* Стили для изображения */
+.main-image {
+    width: 81%;
+    border-radius: 12px;
+    margin-bottom: 10px;
+    position: relative;
+    left: 10%;
+}
+  
+  /* Стили для подписи под изображением */
+.image-caption {
+    font-size: 0.85em;
+    color: #888;
+}
