@@ -86,14 +86,14 @@ WSGI_APPLICATION = 'jmih_site.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'jmih',
-        'USER': 'jmih',
-        'PASSWORD': 'jmih',
-        'HOST': 'localhost',
-        'PORT': '5433',
+        'HOST': os.getenv('POSTGRES_HOST', 'localhost'),
+        'PORT': os.getenv('POSTGRES_PORT', 5432),
+        'USER': os.getenv('POSTGRES_USER', 'postgres'),
+        'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+        'NAME': os.getenv('POSTGRES_DB', 'db01'),
+        'ATOMIC_REQUESTS': True,
     }
 }
-
 
 
 # Password validation
