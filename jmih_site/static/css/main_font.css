@@ -3,7 +3,17 @@
     src: url('font/sf-pro-display_semibold.woff2') format('woff2');
 }
 
+@font-face {
+    font-family: 'SFPRO_history-text';
+    src: url('font/sf-pro-display_semibold.woff2') format('woff2');
+}
+
 .custom-text-medium {
-    font-size: 400% !important;
+    font-size: 350% !important;
     font-family: 'SFPRO_1', sans-serif;
+}
+
+.custom-text-low {
+    font-size: 110% !important;
+    font-family: 'SFPRO_history-text', sans-serif;
 }

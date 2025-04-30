@@ -2,21 +2,19 @@
     position: relative;
     width: auto;
     height: 800px;
-    left: 60px;
-    background-color: #fdfdfd;
-    border: 1px solid #e9e7e7;
+    background-color: #ffffff;
     z-index: 0;
-    border-radius: 100px;
 }
 
 /*закругление фото и размер */
 .con-photo {
+    object-fit: fill;
     position: absolute;
     bottom: 0px;
-    width: 1000px;
-    height: 800px;
-    border-radius: 100px;
-
+    width: 52%;
+    height: 110%;
+    border-radius: 60px;
+    left: 60px;
 }
 
 /*хуй знает как это обьяснить, но фото круглое ))) */
@@ -24,26 +22,21 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* or 'contain' depending on your needs */
     border-radius: inherit; /* To maintain the rounded corners */
 }
+
 /*позиция заголовка */
 .history-heading {
     position: absolute;
-    left: 1050px;
-    top: 180px;
-}
-
-@font-face {
-    font-family: 'SFPRO_2';
-    src: url('font/sf-pro-text_regular.woff2') format('woff2');
+    left: 1110px;
+    top: 180px;;
 }
 
 /*позиция текста под заголовком */
 .history-text {
     position: absolute;
-    left: 1050px;
+    left: 1112px;
     top: 280px;
-    font-size: 150%;
-    font-family: 'SFPRO_2', sans-serif;
+    font-size: 140%;
+    font-family: 'SFPRO_history-text', sans-serif;
 }

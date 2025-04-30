@@ -1,24 +1,25 @@
 {% load static %}
 <link rel="stylesheet" href="{% static 'css/main_font.css' %}">
 <link rel="stylesheet" href="{% static 'css/canvas.css' %}">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pure Scroll Animation</title>
-    <link rel="stylesheet" href="{% static 'css/canvas.css' %}">
-</head>
-  <div class="rectangle">
+<div data-aos="fade-up">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Pure Scroll Animation</title>
+      <link rel="stylesheet" href="{% static 'css/canvas.css' %}">
+  </head>
+    <div class="rectangle">
       <div class="rectangle_logo">
-        <img src="{% static 'img/home_page/logo.png' %}" width="200" height="200">
+        <video width="30%" height="30%" playsinline="playsinline" autoplay="autoplay" muted="muted">
+          <source src="{% static 'video/anim_logo.mp4' %}" type="video/mp4">
+        </video>
       </div>
-    <div class="scrolling-text">
-      <div class="text-layer">
-          <div class="custom-text-medium">
-              <p>Облако который знает каждый.</p>
-          </div>
+      <div class="scrolling-text">
+        <div class="text-layer">
+            <div class="custom-text-medium">
+              Облако который знает каждый.
+            </div>
+        </div>
       </div>
     </div>
-  </div>
-{% comment %}
-      <script src="{% static 'js/canvas.js' %}"></script>
-{% endcomment %}
+</div>

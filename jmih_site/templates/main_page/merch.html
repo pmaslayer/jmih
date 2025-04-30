@@ -1,30 +1,81 @@
 {% load static %}   
 <link rel="stylesheet" href="{% static 'css/merch.css' %}">
-{% comment %}
-  <script src="{% static 'js/dot.js' %}"></script>
-{% endcomment %}
-<div class="con-last">
-    <main>
-        <section id="snapping" class="section">
+<script src="{% static 'js/smoth_scroll.js' %}"></script>
+<div class="con-last" id="scrollableDiv">
+  <main>
+      <section id="snapping" class="section" style="scroll-snap-align: start;">
           <div class="content">
-            <div class="text">
-              <img src="{% static 'img/tsh/tsh.jpg' %}" class="image-class">
-            </div>
+              <div class="text">
+                  <img src="{% static 'img/tsh/tsh1bl.jpg' %}" class="image-class">
+              </div>
           </div>
-        </section>
-        <section id="scrolling" class="section">
+      </section>
+      <section id="scrolling" class="section" style="scroll-snap-align: center;">
           <div class="content">
-            <div class="text">
-              <img src="{% static 'img/tsh/tsh2.jpg' %}" class="image-class">
-            </div>
+              <div class="text">
+                  <img src="{% static 'img/tsh/tsh2bl.jpg' %}" class="image-class">
+              </div>
           </div>
-        </section>
-        <section id="transition" class="section">
+      </section>
+      <section id="transition" class="section" style="scroll-snap-align: end;">
           <div class="content">
-            <div class="text">
-              <img src="{% static 'img/tsh/tsh3.jpg' %}" class="image-class">
-            </div>
+              <div class="text">
+                  <img src="{% static 'img/tsh/tsh3bl.jpg' %}" class="image-class">
+              </div>
           </div>
-        </section>    
-      </main>
+      </section>    
+  </main>
+</div>
+
+<div class="con-last2">
+  <main>
+      <section id="snapping" class="section">
+        <div class="content">
+          <div class="text">
+            <img src="{% static 'img/tsh/tsh1wh.jpg' %}" class="image-class">
+          </div>
+        </div>
+      </section>
+      <section id="scrolling" class="section">
+        <div class="content">
+          <div class="text">
+            <img src="{% static 'img/tsh/tsh2wh.jpg' %}" class="image-class">
+          </div>
+        </div>
+      </section>
+      <section id="transition" class="section">
+        <div class="content">
+          <div class="text">
+            <img src="{% static 'img/tsh/tsh3wh.jpg' %}" class="image-class">
+          </div>
+        </div>
+      </section>    
+    </main>
+</div>
+
+
+<div class="con-last3">
+  <main>
+      <section id="snapping" class="section">
+        <div class="content">
+          <div class="text">
+            <img src="{% static 'img/tsh/kofta1.jpg' %}" class="image-class">
+          </div>
+        </div>
+      </section>
+      <section id="scrolling" class="section">
+        <div class="content">
+          <div class="text">
+            <img src="{% static 'img/tsh/kofta2.jpg' %}" class="image-class">
+          </div>
+        </div>
+      </section>
+      <section id="transition" class="section">
+        <div class="content">
+          <div class="text">
+            <img src="{% static 'img/tsh/kofta3.jpg' %}" class="image-class">
+          </div>
+        </div>
+      </section>    
+    </main>
 </div>

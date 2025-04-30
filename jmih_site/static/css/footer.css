@@ -1,116 +1,146 @@
-.con-footer {
-    position: relative;
-    width: 600px;
-    height: 200px;
-    background-color: #fdfdfd;
-    border: 1px solid #e9e7e7;
-    z-index: 0;
-}
-
 @font-face {
     font-family: 'SFPRO_1';
     src: url('font/sf-pro-display_semibold.woff2') format('woff2');
 }
 
 .card-site {
-	padding-bottom: 19px;
-	font-size: 270% !important; 
+    padding-bottom: 19px;
+    font-size: 270% !important; 
     font-family: 'SFPRO_1', sans-serif;
+    box-sizing: border-box;
 }
 
 .custom-text-footer {
-    font-size: 150% ;
+    font-size: 150% ; 
     font-family: 'SFPRO_1', sans-serif;
+    box-sizing: border-box;
 }
 
-body{
-	line-height: 1.5;
+body {
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
 }
-*{
-	margin:0;
-	padding:1;
-	box-sizing: border-box;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.footer .container{
-	max-width: 1170px;
-	margin:55px;
+
+.footer .container {
+    max-width: 1170px;
+    margin: 55px;
+    box-sizing: border-box;
 }
-.row{
-	display: flex;
-	flex-wrap: wrap;
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
 }
-ul{
-	list-style: none;
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-.footer{
-	background-color: rgba(128, 128, 128, 0.1);
+
+.footer {
+    position: relative;
+    background-color: rgba(128, 128, 128, 0.1);
     padding: 70px 0;
+    box-sizing: border-box;
 }
-.footer-col{
-   width: 23%;
-   padding: 0 15px;
+
+.footer-col {
+    width: 23%;
+    padding: 0 15px;
+    box-sizing: border-box;
 }
-.footer-col h4{                         
-	font-size: 30px;
-	color: rgba(0, 0, 0, 0.7);;
-	text-transform: capitalize;
-	margin-bottom: 35px;
-	font-weight: 500;
-	position: relative;
+
+.footer-col h4 {                         
+    font-size: 30px;
+    color: rgba(0, 0, 0, 0.7);
+    text-transform: capitalize;
+    margin-bottom: 35px;
+    font-weight: 500;
+    position: relative;
+    box-sizing: border-box;
 }
-.footer-col h4::before{
-	content: '';
-	position: absolute;
-	left:0;
-	bottom: -10px;
-	background-color: #000000;
-	height: 2px;
-	box-sizing: border-box;
-	width: 50px;
+
+.footer-col h4::before {
+    content: '';
+    position: absolute;
+    left:0;
+    bottom: -10px;
+    background-color: #000000;
+    height: 2px;
+    box-sizing: border-box;
+    width: 50px;
 }
-.footer-col ul li:not(:last-child){
-	margin-bottom: 10px;
+
+.footer-col ul li:not(:last-child) {
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
-.footer-col ul li a{
-	font-size: 18px;
-	text-transform: capitalize;
-	color: rgba(0, 0, 0, 0.7);
-	text-decoration: none;
-	font-weight: 300;
-	color: rgba(0, 0, 0, 0.7);
-	display: block;
-	transition: all 0.3s ease;
+
+.footer-col ul li a {
+    font-size: 18px;
+    text-transform: capitalize;
+    color: rgba(0, 0, 0, 0.7);
+    text-decoration: none;
+    font-weight: 300;
+    display: block;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
 }
-.footer-col ul li a:hover{
-	color: rgba(0, 0, 0, 0.7);
-	padding-left: 8px;
+
+.footer-col ul li a:hover {
+    color: rgba(0, 0, 0, 0.7);
+    padding-left: 8px;
 }
-.footer-col .social-links a{
-	display: inline-block;
-	height: 40px;
-	width: 40px;
-	background-color: rgba(146, 146, 146, 0.2);
-	margin:0 10px 10px 0;
-	text-align: center;
-	line-height: 40px;
-	border-radius: 50%;
-	color: #ffffff;
-	transition: all 0.5s ease;
+
+.footer-col .social-links a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(146, 146, 146, 0.2);
+    margin:0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #ffffff;
+    transition: all 0.5s ease;
+    box-sizing: border-box;
 }
-.footer-col .social-links a:hover{
-	color: #24262b;
-	background-color: #ffffff;
+
+.footer-col .social-links a:hover {
+    color: #24262b;
+    background-color: #ffffff;
 }
 
 /*responsive*/
-@media(max-width: 767px){
-  .footer-col{
-    width: 50%;
-    margin-bottom: 30px;
+@media(max-width: 767px) {
+  .footer-col {
+      width: 50%;
+      margin-bottom: 30px;
+  }
 }
+
+@media(max-width: 574px) {
+  .footer-col {
+      width: 100%;
+  }
 }
-@media(max-width: 574px){
-  .footer-col{
-    width: 100%;
+
+
+.position_logo_footer img {
+    width: 35%;
+    height: auto;
+    margin-left: 60%;
+    margin-top: -15%;
+    object-fit: contain; /* или cover, в зависимости от желаемого результата */
 }
-}
+
+

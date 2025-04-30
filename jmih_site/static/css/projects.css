@@ -1,7 +1,15 @@
+@font-face {
+  font-family: 'SFPRO_history-text';
+  src: url('font/sf-pro-display_semibold.woff2') format('woff2');
+}
+
+
 .con-asd {
+    position: relative;
     width: auto;
     height: 800px;
     background-color: #ffffff;
+    bottom: 130px;
 }
 
 /* последние новости */
@@ -26,12 +34,12 @@
   * {
     box-sizing: border-box;
   }
-  
+
   body {
-    font-family: 'Noto Sans JP', sans-serif;
-    background-color: #fef8f8;
+    font-family: 'SFPRO_3', sans-serif;
   }
   
+
   .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -50,7 +58,9 @@
     overflow: hidden;
     text-decoration: none;
     top: 90px;
-    
+    content: '';
+    padding-bottom: 160%;
+    bottom: 100px;    
   }
   
   .card__image {
@@ -58,7 +68,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 84%;
     object-fit: cover;
     z-index: 0;
 }
@@ -85,7 +95,7 @@
     display: flex;
     align-items: center;
     gap: 2em;
-    padding: 2em;
+    padding: 1em;
     border-radius: calc(var(--curve) * 1px) 0 0 0;    
     background-color: var(--surface-color);
     transform: translateY(-100%);
@@ -113,7 +123,7 @@
   .card__thumb {
     flex-shrink: 0;
     width: 50px;
-    height: 50px;      
+    height: 52px;      
     border-radius: 50%;      
   }
   
@@ -126,7 +136,6 @@
   .card__tagline {
     display: block;
     margin: 1em 0;
-    font-family: "MockFlowFont";  
     font-size: .8em; 
     color: #D7BDCA;  
   }
@@ -136,13 +145,127 @@
     color: #D7BDCA;
   }
   
+
   .card__description {
-    padding: 0 2em 2em;
+    width: 100%;
+    height: 100%;
+    padding: 0 1em 13em;
     margin: 0;
-    color: #D7BDCA;
-    font-family: "MockFlowFont";   
+    color: #181818;
+    font-family: "SFPRO_history-text";
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
     overflow: hidden;
-  }    
+  }
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: absolute;
+  top: 79%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+}
+
+.wrapper .button {
+  display: inline-block;
+  height: 40px; /* Reduced from 60px to 40px */
+  width: 40px;  /* Reduced from 60px to 40px */
+  float: left;
+  margin: 0 3.33px; /* Adjusted margin for smaller size */
+  overflow: hidden;
+  background: #eeeeee;
+  border-radius: 20%;
+  cursor: pointer;
+  box-shadow: 0px 6.67px 6.67px rgba(0,0,0,0.1); /* Adjusted shadow for smaller size */
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover {
+  width: 133.33px; /* Reduced from 200px to 133.33px */
+}
+
+.wrapper .button .icon {
+  display: inline-block;
+  height: 40px; /* Reduced from 60px to 40px */
+  width: 40px;  /* Reduced from 60px to 40px */
+  text-align: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  line-height: 40px; /* Adjusted line height for smaller size */
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover .icon {
+  background: #4267B2;
+}
+
+.wrapper .button:nth-child(2):hover .icon {
+  background: #3fdd00;
+}
+
+.wrapper .button:nth-child(3):hover .icon {
+  background: #E1306C;
+}
+
+.wrapper .button:nth-child(4):hover .icon {
+  background: #ff0000;
+}
+
+.wrapper .button:nth-child(5):hover .icon {
+  background: #ffae00;
+}
+
+.wrapper .button .icon i {
+  font-size: 24.67px; /* Reduced from 25px to 16.67px */
+  line-height: 40px; /* Adjusted line height for smaller size */
+  color: rgb(77, 77, 77);
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon i {
+  color: #fff;
+}
+
+.wrapper .button span {
+  font-size: 13.33px; /* Reduced from 20px to 13.33px */
+  font-weight: 500;
+  line-height: 40px; /* Adjusted line height for smaller size */
+  margin-left: 6.67px; /* Reduced from 10px to 6.67px */
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1) span {
+  color: #000000;
+}
+
+.wrapper .button:nth-child(2) span {
+  color: #000000;
+}
+
+.wrapper .button:nth-child(3) span {
+  color: #000000;
+}
+
+.wrapper .button:nth-child(4) span {
+  color: #000000;
+}
+
+.wrapper .button:nth-child(5) span {
+  color: #000000;
+}
+
+.wrapper .button .icon-image {
+  height: 24px; /* Соответствует размеру иконки */
+  width: 24px;
+  object-fit: contain; /* Чтобы изображение не искажалось */
+}
+

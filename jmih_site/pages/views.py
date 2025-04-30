@@ -13,3 +13,9 @@ def offices(request):
 
 def partners(request):
     return render(request, 'other_page/partners.html')
+
+def politika_konfidentsialnosti(request):
+    return render(request, 'other_page/politika_konfidentsialnosti.html')
+
+def dogovor_oferty(request):
+    return render(request, 'other_page/dogovor_oferty.html')

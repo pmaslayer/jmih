@@ -1,35 +1,177 @@
 {% load static %}
-<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<link rel="stylesheet" href="{% static 'css/post_card.css' %}">
+<link rel="stylesheet" href="{% static 'css/main_font.css' %}">
 
 <section>
+  <div data-aos="fade-up">
   <div class="card-grid">
-    <a class="card" href="#">
-      <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80)"></div>
-      <div class="card__content">
-        <p class="card__category">Category</p>
-        <h3 class="card__heading">Example Card Heading</h3>
-      </div>
-    </a>
-    <a class="card" href="#">
+  <a class="card-news" data-bs-toggle="modal" data-bs-target="#myModal1" href="#">
+    <div class="card__background" style="background-image: url('https://images.unsplash.com/photo-1557177324-56c542165309?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')"></div>
+    <div class="card__content">
+      <p class="card__category">РАЗВИТИЕ И ПРОДВИЖЕНИЕ</p>
+      <h3 class="card__heading">Наш сайт</h3>
+    </div>
+  </a>
+
+
+    <a class="card-news" data-bs-toggle="modal" data-bs-target="#myModal2" href="#">
       <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557187666-4fd70cf76254?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
       <div class="card__content">
-        <p class="card__category">Category</p>
-        <h3 class="card__heading">Example Card Heading</h3>
+        <p class="card__category">НОВИНКИ JMIH VAPESHOP</p>
+        <h3 class="card__heading">Мы запустили бот!</h3>
       </div>
     </a>
-    <a class="card" href="#">
+
+    
+    <a class="card-news" data-bs-toggle="modal" data-bs-target="#myModal3" href="#">
       <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1556680262-9990363a3e6d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
       <div class="card__content">
-        <p class="card__category">Category</p>
-        <h3 class="card__heading">Example Card Heading</h3>
+        <p class="card__category">ВКУСНАЯ ДОСТАВКА</p>
+        <h3 class="card__heading">Приложение FBJ</h3>
       </div>
     </li>
-    <a class="card" href="#">
+
+
+    <a class="card-news" data-bs-toggle="modal" data-bs-target="#myModal4" href="#">
       <div class="card__background" style="background-image: url(https://images.unsplash.com/photo-1557004396-66e4174d7bf6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60)"></div>
       <div class="card__content">
-        <p class="card__category">Category</p>
-        <h3 class="card__heading">Example Card Heading</h3>
+        <p class="card__category">фывфыв</p>
+        <h3 class="card__heading">фывфывфыв</h3>
       </div>
     </a>
   <div>
+
 </section>
+
+<!-- Модальное окно для карточки 1 -->
+<div class="modal fade" id="myModal1" tabindex="-1" aria-labelledby="myModalLabel1" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="myModalLabel1"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body"> 
+        
+        <div class ="page-body">
+          <div class="container-card">
+            <div class="content-box">
+              <div class="custom-text-low">
+                <h3 class="subtitle">Стремительный рост нашей компании</h3>
+                <h1 class="title">Лучший показатель!</h1>
+                <p class="description">
+                  <strong class="highlight">Мы не останавливаемся и выходим за рамки!</strong> Именно поэтому рады презентовать Вам абсолютную новинку - сайт JMIH INDUSTRY.
+                  Это уникальная платформа, где JMIH перестает быть просто сетью магазинов.
+                  Вас удивит не только стильное оформление, но и увлекательное содержание!
+                  Как появилась компания ЖМЫХ? Что мы уже сделали, а что в наших грандиозных планах?
+                  Здесь Вы сможете найти ответы на все вопросы и стать ближе к любимой компании!
+                </p>
+                <img src="{% static 'img/komanda/iphone.png' %}" alt="Mac performance showcase" class="main-image"/>
+                <div class="image-caption">Скорее открывайте другие страницы нашего сайта и погружайтесь в ЖМЫХ атмосферу!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно для карточки 2 -->
+<div class="modal fade" id="myModal2" tabindex="-1" aria-labelledby="myModalLabel2" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="myModalLabel2"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class ="page-body">
+          <div class="container-card">
+            <div class="content-box">
+              <div class="custom-text-low">
+                <h3 class="subtitle">Вся нужная информация в одном боте!</h3>
+                <h1 class="title">asd</h1>
+                <p class="description">
+                  <strong class="highlight">Для более удобной навигации команда "Жмых" создала отдельную платформу,</strong> 
+                  где Вы сможете найти ответ абсолютно на любой вопрос.
+                  Что может этот бот?
+                  Соориентировать по товару
+                  Предоставить доступ к программе лояльности
+                  Указать точные адреса и режимы работы всех филиалов
+                  Передать обращение в поддержку
+                  Отправить сообщение в общий чат нашей компании "JMIH ЧАТ"
+                  Познакомить с нашими партнерами
+                  Оформить доставку товара прямо до Вашего дома
+                  Рассказать о других наших проектов
+                </p>
+                <img src="{% static 'img/komanda/' %}" alt="Mac performance showcase" class="main-image"/>
+                <div class="image-caption">Скорее присоединяйтесь к боту "JMIH|VAPESHOP" и наслаждайтесь легким доступом к любой информации!</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно для карточки 3 -->
+<div class="modal fade" id="myModal3" tabindex="-1" aria-labelledby="myModalLabel3" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="myModalLabel3"></h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+
+        <div class ="page-body">
+          <div class="container-card">
+            <div class="content-box">
+              <div class="custom-text-low">
+                <h3 class="subtitle">Та самая доставка еды, после которой Вы забудете об остальных!</h3>
+                <h1 class="title">FOOD BY JMIH</h1>
+                <p class="description">
+                  <strong class="highlight">Помимо качественных блюд и быстрой доставки</strong> 
+                  мы позаботились и об удобстве совершения заказа!
+                  Наше приложение "FBJ FOOD" - это отдельная платформа, где сложность выбора принесет удовльствие.
+                  Широкий ассортимент блюд, подробная информация о каждой позиции, стильное оформление и конечно же приятная бонусная система и акции!
+                </p>
+                <img src="{% static 'img/last_news/fbj_screen.png' %}" alt="Mac performance showcase" class="main-image"/>
+                <div class="image-caption">Скачать и зарегистрироваться → (вставить ссылку)</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Модальное окно для карточки 4 -->
+<div class="modal fade" id="myModal4" tabindex="-1" aria-labelledby="myModalLabel4" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="myModalLabel4">Заголовок модального окна 4</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
+      </div>
+      <div class="modal-body">
+        фывфывфывыф
+      </div>
+      <div class="modal-footer">
+      </div>
+    </div>
+  </div>
+</div>

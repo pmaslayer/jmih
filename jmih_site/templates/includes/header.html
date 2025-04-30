@@ -6,55 +6,73 @@
     <nav class="navbar navbar-light" style="background-color: rgb(128 , 128, 128, 0.1)">
       <div class="container">
         <a class="navbar-brand" href="{% url 'pages:home' %}">
-          <img src="{% static 'img/home_page/logo.png' %}" width="30" height="30" class="d-inline-block align-top" alt="">
+          <img src="{% static 'img/home_page/icon_black.png' %}" width="40" height="30" class="d-inline-block align-top" alt="">
           <span style="color:rgb(0, 0, 0, 0.7);">JMIH INDUSTRY</span>
         </a>
-        {% with request.resolver_match.view_name as view_name %}      
+        {% with request.resolver_match.view_name as view_name %}
           <ul class="nav nav-underline">
-            <li class="nav-item">              
-              <a class="nav-link {% if view_name == 'pages:about' %} active {% endif %}" href="{% url 'pages:about' %}">
-                <span style="color:rgb(0, 0, 0, 0.7);">История</span>
-              </a>
-            </li>
-            <li class="nav-item">              
-              <a class="nav-link {% if view_name == 'blog:index' %} active {% endif %}" href="{% url 'pages:home' %}">
-                <span style="color:rgb(0, 0, 0, 0.7);">Проекты</span>
-              </a>
+            <li class="nav-item">
+              <div class="raise">
+                <a class="nav-link {% if view_name == 'pages:about' %} active {% endif %}" href="{% url 'pages:about' %}">
+                  <span style="color:rgb(0, 0, 0, 0.7);">История</span>
+                </a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if view_name == 'pages:partners' %} active {% endif %}" href="{% url 'pages:partners' %}">
-                <span style="color:rgb(0, 0, 0, 0.7);">Партнёры</span>
-              </a>
+              <div class="raise">
+                <a class="nav-link {% if view_name == 'blog:index' %} active {% endif %}" href="{% url 'pages:home' %}">
+                  <span style="color:rgb(0, 0, 0, 0.7);">Проекты</span>
+                </a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if view_name == 'pages:partners' %} active {% endif %}" href="{% url 'pages:partners' %}">
-                <span style="color:rgb(0, 0, 0, 0.7);">Команда</span>
-              </a>
+              <div class="raise">
+                <a class="nav-link {% if view_name == 'pages:partners' %} active {% endif %}" href="{% url 'pages:partners' %}">
+                  <span style="color:rgb(0, 0, 0, 0.7);">Партнёры</span>
+                </a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if view_name == 'pages:partners' %} active {% endif %}" href="{% url 'pages:partners' %}">
-                <span style="color:rgb(0, 0, 0, 0.7);">Мерч</span>
-              </a>
+              <div class="raise">
+                <a class="nav-link {% if view_name == 'pages:partners' %} active {% endif %}" href="{% url 'pages:partners' %}">
+                  <span style="color:rgb(0, 0, 0, 0.7);">Команда</span>
+                </a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if view_name == 'pages:partners' %} active {% endif %}" href="{% url 'pages:partners' %}">
-                <span style="color:rgb(0, 0, 0, 0.7);">Система лояльности</span>
-              </a>
+              <div class="raise">
+                <a class="nav-link {% if view_name == 'pages:partners' %} active {% endif %}" href="{% url 'pages:partners' %}">
+                  <span style="color:rgb(0, 0, 0, 0.7);">Мерч</span>
+                </a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if view_name == 'pages:partners' %} active {% endif %}" href="{% url 'pages:partners' %}">
-                <span style="color:rgb(0, 0, 0, 0.7);">Поддержка</span>
-              </a>
+              <div class="raise">
+                <a class="nav-link {% if view_name == 'pages:partners' %} active {% endif %}" href="{% url 'pages:partners' %}">
+                  <span style="color:rgb(0, 0, 0, 0.7);">Система лояльности</span>
+                </a>
+              </div>
             </li>
             <li class="nav-item">
-              <a class="nav-link {% if view_name == 'pages:partners' %} active {% endif %}" href="{% url 'pages:partners' %}">
-                <span style="color:rgb(0, 0, 0, 0.7);">Карьера</span>
-              </a>
+              <div class="raise">
+                <a class="nav-link {% if view_name == 'pages:partners' %} active {% endif %}" href="{% url 'pages:partners' %}">
+                  <span style="color:rgb(0, 0, 0, 0.7);">Поддержка</span>
+                </a>
+              </div>
             </li>
-            <li class="nav-item">              
-              <a class="nav-link {% if view_name == 'pages:about' %} active {% endif %}" href="{% url 'pages:about' %}">
-                <span style="color:rgb(0, 0, 0, 0.7);">О нас</span>
-              </a>
+            <li class="nav-item">
+              <div class="raise">
+                <a class="nav-link {% if view_name == 'pages:partners' %} active {% endif %}" href="{% url 'pages:partners' %}">
+                  <span style="color:rgb(0, 0, 0, 0.7);">Карьера</span>
+                </a>
+              </div>
+            </li>
+            <li class="nav-item">
+              <div class="raise">           
+                <a class="nav-link {% if view_name == 'pages:about' %} active {% endif %}" href="{% url 'pages:about' %}">
+                  <span style="color:rgb(0, 0, 0, 0.7);">О нас</span>
+                </a>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link {% if view_name == 'pages:offices' %} active {% endif %}" href="{% url 'pages:offices' %}">
