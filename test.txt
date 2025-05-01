@@ -1,0 +1,164 @@
+старый nginx.conf
+events {}
+
+http {
+    server {
+        listen 80;
+        server_name 45.87.247.212 xn--80ahficui0aik1a5e.xn--p1ai www.xn--80ahficui0aik1a5e.xn--p1ai;
+        return 301 https://$host$request_uri;
+    }
+
+    server {
+        listen 443 ssl;
+        server_name 45.87.247.212 xn--80ahficui0aik1a5e.xn--p1ai www.xn--80ahficui0aik1a5e.xn--p1ai;
+
+        ssl_certificate /etc/letsencrypt/live/xn--80ahficui0aik1a5e.xn--p1ai/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/xn--80ahficui0aik1a5e.xn--p1ai/privkey.pem;
+
+        location / {
+            proxy_pass http://web:8000;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        location /static/ {
+            alias /app/static/;  # Обновили путь
+        }
+
+        location /media/ {
+            alias /app/media/;
+        }
+    }
+}
+~                    
+
+
+новый nginx.conf
+
+events {}
+
+http {
+    include /etc/nginx/mime.types;
+    server_tokens off;
+    client_max_body_size 10M;
+
+    server {
+        listen 80;
+        server_name 45.87.247.212 xn--80ahficui0aik1a5e.xn--p1ai www.xn--80ahficui0aik1a5e.xn--p1ai;
+        return 301 https://$host$request_uri;
+    }
+
+    server {
+        listen 443 ssl;
+        server_name 45.87.247.212 xn--80ahficui0aik1a5e.xn--p1ai www.xn--80ahficui0aik1a5e.xn--p1ai;
+
+        ssl_certificate /etc/letsencrypt/live/xn--80ahficui0aik1a5e.xn--p1ai/fullchain.pem;
+        ssl_certificate_key /etc/letsencrypt/live/xn--80ahficui0aik1a5e.xn--p1ai/privkey.pem;
+
+        location / {
+            proxy_pass http://web:8000;
+            proxy_set_header Host $host;
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+            proxy_set_header X-Forwarded-Proto $scheme;
+        }
+
+        location /static/ {
+            alias /app/static/;
+        }
+
+        location /media/ {
+            alias /app/media/;
+        }
+    }
+}
+
+
+старый docker-compose
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - staticfiles:/app/static  # Обновили том
+      - media:/app/media
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - /etc/letsencrypt/:/etc/letsencrypt/
+      - staticfiles:/app/static  # Обновили том
+      - media:/app/media
+    depends_on:
+      - web
+
+volumes:
+  postgres_data:
+  static:  # Обновили имя тома
+  media:
+
+
+новый docker-compose
+
+services:
+  web:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    volumes:
+      - .:/app
+      - static:/app/static
+      - media:/app/media
+    depends_on:
+      - db
+
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_DB: ${POSTGRES_DB}
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+    volumes:
+      - postgres_data:/var/lib/postgresql/data/
+
+  nginx:
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf
+      - /etc/letsencrypt/:/etc/letsencrypt/
+      - static:/app/static
+      - media:/app/media
+    depends_on:
+      - web
+
+volumes:
+  postgres_data:
+  static:
+  media:            
