@@ -1,0 +1,271 @@
+@font-face {
+  font-family: 'SFPRO_history-text';
+  src: url('font/sf-pro-display_semibold.woff2') format('woff2');
+}
+
+
+.con-asd {
+    position: relative;
+    width: auto;
+    height: 800px;
+    background-color: #ffffff;
+    bottom: 130px;
+}
+
+/* последние новости */
+.last-text {
+    position: relative;
+    /*высота */
+    top: 150px;
+    /*где находится текст */
+    text-align: left;
+    /*отступ с правой стороны */
+    padding-left: 200px;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 2;
+}
+
+:root {
+    --surface-color: #fff;
+    --curve: 40;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'SFPRO_3', sans-serif;
+  }
+  
+
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
+    margin: 4rem 3vw;
+    padding: 0;
+    list-style-type: none;
+  }
+  
+  .card {
+    position: relative;
+    display: block;
+    height: 100%;  
+    width: 100%;
+    border-radius: calc(var(--curve) * 1px);
+    overflow: hidden;
+    text-decoration: none;
+    top: 90px;
+    content: '';
+    padding-bottom: 160%;
+    bottom: 100px;    
+  }
+  
+  .card__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 84%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+  
+  .card__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;      
+    border-radius: calc(var(--curve) * 1px);    
+    background-color: var(--surface-color);      
+    transform: translateY(100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card:hover .card__overlay {
+    transform: translateY(0);
+  }
+  
+  .card__header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 2em;
+    padding: 1em;
+    border-radius: calc(var(--curve) * 1px) 0 0 0;    
+    background-color: var(--surface-color);
+    transform: translateY(-100%);
+    transition: .2s ease-in-out;
+  }
+  
+  .card__arc {
+    width: 80px;
+    height: 80px;
+    position: absolute;
+    bottom: 100%;
+    right: 0;      
+    z-index: 1;
+  }
+  
+  .card__arc path {
+    fill: var(--surface-color);
+    d: path("M 40 80 c 22 0 40 -22 40 -40 v 40 Z");
+  }       
+  
+  .card:hover .card__header {
+    transform: translateY(0);
+  }
+  
+  .card__thumb {
+    flex-shrink: 0;
+    width: 50px;
+    height: 52px;      
+    border-radius: 50%;      
+  }
+  
+  .card__title {
+    font-size: 1em;
+    margin: 0 0 .3em;
+    color: #6A515E;
+  }
+  
+  .card__tagline {
+    display: block;
+    margin: 1em 0;
+    font-size: .8em; 
+    color: #D7BDCA;  
+  }
+  
+  .card__status {
+    font-size: .8em;
+    color: #D7BDCA;
+  }
+  
+
+  .card__description {
+    width: 100%;
+    height: 100%;
+    padding: 0 1em 13em;
+    margin: 0;
+    color: #181818;
+    font-family: "SFPRO_history-text";
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+  }
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: absolute;
+  top: 79%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-flex;
+}
+
+.wrapper .button {
+  display: inline-block;
+  height: 40px; /* Reduced from 60px to 40px */
+  width: 40px;  /* Reduced from 60px to 40px */
+  float: left;
+  margin: 0 3.33px; /* Adjusted margin for smaller size */
+  overflow: hidden;
+  background: #eeeeee;
+  border-radius: 20%;
+  cursor: pointer;
+  box-shadow: 0px 6.67px 6.67px rgba(0,0,0,0.1); /* Adjusted shadow for smaller size */
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover {
+  width: 133.33px; /* Reduced from 200px to 133.33px */
+}
+
+.wrapper .button .icon {
+  display: inline-block;
+  height: 40px; /* Reduced from 60px to 40px */
+  width: 40px;  /* Reduced from 60px to 40px */
+  text-align: center;
+  border-radius: 50%;
+  box-sizing: border-box;
+  line-height: 40px; /* Adjusted line height for smaller size */
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1):hover .icon {
+  background: #4267B2;
+}
+
+.wrapper .button:nth-child(2):hover .icon {
+  background: #3fdd00;
+}
+
+.wrapper .button:nth-child(3):hover .icon {
+  background: #E1306C;
+}
+
+.wrapper .button:nth-child(4):hover .icon {
+  background: #ff0000;
+}
+
+.wrapper .button:nth-child(5):hover .icon {
+  background: #ffae00;
+}
+
+.wrapper .button .icon i {
+  font-size: 24.67px; /* Reduced from 25px to 16.67px */
+  line-height: 40px; /* Adjusted line height for smaller size */
+  color: rgb(77, 77, 77);
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:hover .icon i {
+  color: #fff;
+}
+
+.wrapper .button span {
+  font-size: 13.33px; /* Reduced from 20px to 13.33px */
+  font-weight: 500;
+  line-height: 40px; /* Adjusted line height for smaller size */
+  margin-left: 6.67px; /* Reduced from 10px to 6.67px */
+  transition: all 0.3s ease-out;
+}
+
+.wrapper .button:nth-child(1) span {
+  color: #000000;
+}
+
+.wrapper .button:nth-child(2) span {
+  color: #000000;
+}
+
+.wrapper .button:nth-child(3) span {
+  color: #000000;
+}
+
+.wrapper .button:nth-child(4) span {
+  color: #000000;
+}
+
+.wrapper .button:nth-child(5) span {
+  color: #000000;
+}
+
+.wrapper .button .icon-image {
+  height: 24px; /* Соответствует размеру иконки */
+  width: 24px;
+  object-fit: contain; /* Чтобы изображение не искажалось */
+}
+

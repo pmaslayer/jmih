@@ -1,0 +1,41 @@
+.back-layer {
+    position: relative;
+    height: 864px;
+    width: 1915px;
+    background-color: rgb(255, 255, 255);
+    z-index: 4;
+}
+
+.video-background-holder {
+    position: absolute;
+    background-color: black;
+    height: calc(100vh - 72px);
+    min-height: 25rem;
+    width: 206vh; /* сохранено изначальное значение */
+    overflow: hidden;
+    border-radius: 100px; /* сохранено изначальное значение */
+    margin-left: 30px;
+}
+
+.video-background-holder video {
+    position: absolute;
+    top: -10%;
+    left: 0%; 
+    min-width: 100%;
+    min-height: 100%;
+    width: 0px;
+    height: -1px;
+    z-index: 1;
+}
+
+
+.video-background-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+    opacity: -0.5;
+    z-index: 2;
+} */

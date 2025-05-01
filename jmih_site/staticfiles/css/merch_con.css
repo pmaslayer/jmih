@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'SFPRO_3';
+    src: url('font/sf-pro-display-bold.woff2') format('woff2');
+}
+
+.custom-text-low {
+    font-size: 350% !important;
+    font-family: 'SFPRO_3',Arial;
+}
+
+.con-asd-bsd {
+    position: relative;
+    width: 1912px;
+    height: 800px;
+    background-color: #ffffff;
+}
+
+.pos-text-left {
+    position: absolute;
+    top: 34%;
+    text-align: left;
+    padding-left: 4%;
+}
+
+.pos-text-right {
+    position:absolute;
+    top: 34%;
+    padding-left: 82%;
+}
+
+.pos-merch-con {
+    position: absolute;
+    top: 80px;
+    left: 150px;
+}

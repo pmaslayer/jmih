@@ -1,0 +1,54 @@
+
+body {
+    color: rgb(0, 0, 0);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.scrolling-text {
+    position: relative;
+    /*высота */
+    top: -53%;
+    /*где находится текст */
+    text-align: right;
+    /*отступ с правой стороны */
+    padding-right: 200px;
+    transform: translateY(-50%);
+    width: 100%;
+    z-index: 1;
+}
+
+.text-layer {
+    opacity: 0;
+    animation: fadeInOut 5s linear forwards;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInOut {
+    0%, 5% { opacity: 0; transform: translateY(20px); }
+    15% { opacity: 1; transform: translateY(0); }
+    85%, 90%, 95%, 100% { opacity: 1; transform: translateY(0); }
+}
+
+  /* Additional styling for better visual effect */
+.text-layer:nth-child(even) {
+    animation-delay: 10s;
+}
+
+.text-layer span {
+    font-size: 24px;
+    letter-spacing: 2px;
+    line-height: 40px;
+    padding: 0 20px;
+}
+/* прямоугольник с лого и текстом */
+.rectangle {
+    position: relative;
+    width: 1915px;
+    height: 260px;
+    background-color: #ffffff;
+    padding-left: 100px;
+    padding-top: 25px;
+}
+/*лого позиционирование */

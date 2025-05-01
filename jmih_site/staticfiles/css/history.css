@@ -1,0 +1,42 @@
+.con-last-history{
+    position: relative;
+    width: auto;
+    height: 800px;
+    background-color: #ffffff;
+    z-index: 0;
+}
+
+/*закругление фото и размер */
+.con-photo {
+    object-fit: fill;
+    position: absolute;
+    bottom: 0px;
+    width: 52%;
+    height: 110%;
+    border-radius: 60px;
+    left: 60px;
+}
+
+/*хуй знает как это обьяснить, но фото круглое ))) */
+.con-photo .image-class {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit; /* To maintain the rounded corners */
+}
+
+/*позиция заголовка */
+.history-heading {
+    position: absolute;
+    left: 1110px;
+    top: 180px;;
+}
+
+/*позиция текста под заголовком */
+.history-text {
+    position: absolute;
+    left: 1112px;
+    top: 280px;
+    font-size: 140%;
+    font-family: 'SFPRO_history-text', sans-serif;
+}

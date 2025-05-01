@@ -11,7 +11,7 @@
     background-color: black;
     height: calc(100vh - 72px);
     min-height: 25rem;
-    width: 206vh; /* сохранено изначальное значение */
+    width: 199vh; /* сохранено изначальное значение */
     overflow: hidden;
     border-radius: 100px; /* сохранено изначальное значение */
     margin-left: 30px;
